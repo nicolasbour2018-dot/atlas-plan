@@ -31,11 +31,16 @@ claude plugin install atlas-plan@atlas-plan
 
 ## What the plan map shows
 
-- Added nodes and links carry the work phase `plan`: the page's phase stepper shows the map before
-  the plan, with what the plan adds dimmed and dotted.
-- Changed and removed elements carry an open point whose id starts with `plan-`; the header's
-  open points list them.
+- Added, changed and removed nodes take the draft's colours `plan-added` (green), `plan-changed`
+  (pink) and `plan-removed` (red), seen in every view.
+- Added nodes and links carry the after phase (`après`, or `after` for a map in English): the
+  stepper's before phase (`avant`) shows the map before the plan, what the plan adds dimmed and
+  dotted.
+- Changed and removed elements carry an open point whose id starts with `plan-`; a change's text
+  keeps the value before the plan. The header's open points list them.
 - Removed leaves are drawn dashed (`kind: "off"`).
+- The plan links each view that shows a mark, before and after: an element added in one container
+  shows in another view only as a ghost that looks the same before the plan.
 
 `scripts/atlas-plan.sh` finds the map folder, runs atlas's CLI, edits a draft's data files
 (`scripts/edit-draft.ts`), and starts or stops a draft's server, whose pid and log sit in

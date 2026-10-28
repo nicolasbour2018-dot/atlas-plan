@@ -1,6 +1,6 @@
 {
   "name": "atlas-plan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Shows an implementation plan on the repository's atlas map: a draft of the map with what the plan adds, changes and removes, served beside the session and linked from the plan",
   "author": {
     "name": "Nicolas Bour",
