@@ -1,0 +1,15 @@
+{
+  "name": "atlas-plan",
+  "owner": {
+    "name": "Nicolas Bour",
+    "email": "nicolasbour2018@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "atlas-plan",
+      "description": "Shows an implementation plan on the repository's atlas map",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

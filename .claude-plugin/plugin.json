@@ -1,0 +1,11 @@
+{
+  "name": "atlas-plan",
+  "version": "0.1.0",
+  "description": "Shows an implementation plan on the repository's atlas map: a draft of the map with what the plan adds, changes and removes, served beside the session and linked from the plan",
+  "author": {
+    "name": "Nicolas Bour",
+    "email": "nicolasbour2018@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["atlas", "plan", "architecture", "map"]
+}
