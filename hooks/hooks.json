@@ -1,0 +1,17 @@
+{
+  "description": "Refuses ExitPlanMode while the plan carries no plan map line in a repository that holds an atlas map folder",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/require-plan-map.sh\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

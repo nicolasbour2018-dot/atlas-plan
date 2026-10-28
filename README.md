@@ -6,6 +6,10 @@ copies the map into an atlas draft (`drafts/plan-<subject>/`, ignored by git), m
 adds, changes and removes, serves the draft's page beside the session, and links it from the plan.
 The original map is left untouched.
 
+A `PreToolUse` hook on `ExitPlanMode` (`scripts/require-plan-map.sh`) refuses a plan that lacks
+the line `<!-- atlas-plan: <draft folder> -->` in a repository that holds a map folder, so every
+plan gets its map. A plan that touches no element of the map carries `<!-- atlas-plan: none -->`.
+
 ## Requirements
 
 - The atlas plugin installed (`atlas@bengous-plugins`), and `bun`, `jq` and `git` on the `PATH`.

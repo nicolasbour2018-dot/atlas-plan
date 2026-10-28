@@ -26,7 +26,9 @@ until the plan is done and checked against the repository. Every command below n
    reads one node with its children and links). Write the change list: every component, module,
    service or flow the plan adds, changes or removes, each tied to the node or link of the map it
    lands on, or to the container a new node goes in. Done when every step of the plan that touches
-   the architecture has a line, and every line names an id of the map.
+   the architecture has a line, and every line names an id of the map. A plan that touches no
+   element of the map gets, in place of the section of step 7, the line
+   `<!-- atlas-plan: none -->` and one sentence saying why; the skill ends there.
 
 3. **Make the draft.** Name it `plan-<subject>`, kebab-case, the plan's subject in two to four
    words. Run `atlas-plan.sh cli draft <map folder> <name>`; it prints the draft folder. A plan
@@ -61,8 +63,8 @@ until the plan is done and checked against the repository. Every command below n
    container being the one most of the changes land in.
 
 7. **Link it from the plan.** Add a section to the plan, in the plan's language, holding:
-   - the line `<!-- atlas-plan: <draft folder, relative to the repository root> -->`, which the
-     hook and the adopt step read;
+   - the line `<!-- atlas-plan: <draft folder, relative to the repository root> -->`: the plugin's
+     hook refuses ExitPlanMode on a plan without it;
    - the link to the map after the plan, `<address>#<container id>`, and to the map before it,
      `<address>#<container id>?phase=<phase before plan>`;
    - the change list of step 2 as a table: element, change (added, changed, removed), node id.
